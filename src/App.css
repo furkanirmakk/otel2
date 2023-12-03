@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+.background-container {
+  background-image: url('./assets/gok.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Diğer stil özellikleri ekleyebilirsiniz */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white; /* Metin rengi gibi diğer stilleri ekleyebilirsiniz */
+  
+}

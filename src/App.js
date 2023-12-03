@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route, Routes,  } from 'react-router-dom';
 
+import Anasayfa from './component/Anasayfa';
+import Iletisim from './component/Iletisim';
+import Odalarimiz from './component/odalarimiz';
+import StandartOda from './component/standartOda';
+import LuksOda from './component/LuksOda';
+
+  
 function App() {
+
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+
+    <div>
+
+
+
+    < BrowserRouter >
+      <div>
+        <Routes>
+          <Route path='/' element={<Anasayfa />} />
+          
+          <Route path='/iletisim' element={<Iletisim />} />
+          <Route path='/odalarimiz' element={<Odalarimiz />} />
+          <Route path='/standartOda' element={<StandartOda />} />
+          <Route path='/luksoda' element={<LuksOda />} />
+        </Routes>
+      </div>
+    </BrowserRouter >
+</div>
   );
 }
 
