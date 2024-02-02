@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import image1 from '../assets/oda1.jpg';
-import image2 from '../assets/oda2.jpg';
-import image3 from '../assets/oda3.jpg';
-import image4 from '../assets/oda4.jpg';
-import image5 from '../assets/oda5.jpg';
-import image6 from '../assets/oda6.jpg';
+import React, { useState, useEffect } from 'react';
+import image1 from '../assets/301/IMG_4576.png';
+import image2 from '../assets/301/IMG_4581.png';
+import image3 from '../assets/301/IMG_4582.png';
+import image4 from '../assets/301/IMG_4587.png';
+import image5 from '../assets/302/IMG_4640.png';
+import image6 from '../assets/302/IMG_4639.png';
 import Right from '../assets/right.png';
 import Left from '../assets/left.png';
 
@@ -22,13 +22,22 @@ const Slide = () => {
   };
 
 
+  useEffect(() => {
+    const intervalId = setInterval(handleNextSlide, 2000); // Her 3 saniyede bir geçiş yapar
+
+    return () => {
+      clearInterval(intervalId); // Bileşen kaldırıldığında zamanlayıcıyı temizler
+    };
+  }, []);
+
+
   const [isFullScreen, setFullScreen] = useState(false);
 
   const handleImageClick = () => {
       setFullScreen(!isFullScreen);
   };
   return (
-    <div style={{ position: 'relative', maxWidth: '900px', margin: 'auto' }}>
+    <div className='flex justify-center items-center' style={{ position: 'relative', maxWidth: '900px', margin: 'auto' }}>
        {isFullScreen && (
                         <div
                             style={{
@@ -58,10 +67,10 @@ const Slide = () => {
                     )}
 
 
-      <img className='rounded-lg mb-10'
+      <img className='rounded-lg mb-10 '
         src={images[currentSlide]}
         alt={`Slide ${currentSlide + 1}`}
-        style={{ width: '100%', height: 'auto' }}
+        style={{ width: '60%', height: 'auto',  }}
         onClick={handleImageClick}
       />
      

@@ -8,9 +8,8 @@ function Iletisim() {
     return (
         <div>
             <Navbar />
-            <h1>İletişim</h1>
-            <Map address={address} />
-            <Footer />
+            <Map  />
+           <Footer />
         </div>
     );
 }

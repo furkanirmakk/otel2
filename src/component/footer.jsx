@@ -18,7 +18,7 @@ const Footer = () => {
                     <div className='items-center justify-center text-center '>
                         <div><a href="/">Anasayfa</a></div>
                         <div className='w-full h-12 bg-yz shadow-lg'></div>
-                        <div><a href="/">İletişim</a></div>
+                        <div><a href="/iletisim">İletişim</a></div>
                         <div className='w-full h-12 bg-yz shadow-lg'></div>
                         <div><a href="/">Odalarımız</a></div>
                         <div className='w-full h-12 bg-yz shadow-lg'></div>

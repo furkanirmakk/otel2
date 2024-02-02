@@ -1,0 +1,38 @@
+.gallery {
+    height: 500px;
+    width: 80%;
+    display: flex;
+    gap: 1rem;
+    margin: 1rem auto;
+    padding: 1rem;
+  }
+  .gallery > div {
+    flex: 1;
+    border-radius: 2rem;
+    background: var(--i) no-repeat center;
+    background-size: auto 100%;
+    transition: all 0.7s cubic-bezier(0.25, 0.4, 0.45, 1.4);
+    
+  }
+  .gallery > div:hover {
+    flex: 3;
+    border-radius: 2rem;
+    width: auto;
+  }
+ 
+
+@media (max-width: 600px) {
+    .gallery {
+        flex-direction: column;
+        
+    }
+   
+
+  
+    
+    
+  
+  
+}
+
+  

@@ -4,8 +4,7 @@ import Anasayfa from './component/Anasayfa';
 import Iletisim from './component/Iletisim';
 import Odalarimiz from './component/odalarimiz';
 import StandartOda from './component/standartOda';
-import LuksOda from './component/LuksOda';
-
+import SuitOda from './component/SuitOda'; 
   
 function App() {
 
@@ -24,7 +23,7 @@ function App() {
           <Route path='/iletisim' element={<Iletisim />} />
           <Route path='/odalarimiz' element={<Odalarimiz />} />
           <Route path='/standartOda' element={<StandartOda />} />
-          <Route path='/luksoda' element={<LuksOda />} />
+          <Route path='/suitOda' element={<SuitOda />} />
         </Routes>
       </div>
     </BrowserRouter >

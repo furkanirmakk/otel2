@@ -9,6 +9,7 @@ module.exports = {
       spacing: {
       '1': '8px',
       '2': '12px',
+      '15': '120px',
       '3': '16px',
       '4': '24px',
       '5': '32px',
@@ -20,7 +21,7 @@ module.exports = {
       '11': '100px',
       '12': '3px',
       '13': '1000px',
-        '14': '500px'
+      '14': '500px'
     },
     colors:{
       yz: '#4B4E53',
@@ -28,7 +29,7 @@ module.exports = {
       bgc: '#B7D0D7',
       black: '#211219',
       womco: '#2F343A',
-      
+      bg1: '#F8F9F5',
     },
   },
   },

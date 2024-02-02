@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, } from 'react';
 import Navbar from './navbar';
-import resim1 from '../assets/oda1.jpg'
+import img1 from '../assets/düzenlemeler/IMG_4603.png';
 import '../App.css'
 import Slide from './Slayt';
 import Bed from '../assets/bed.png'
@@ -9,6 +9,7 @@ import Room from '../assets/room.png'
 import Size from '../assets/size.png'
 import Diamond from '../assets/diamond.png'
 import Footer from './footer';
+import Oda1Gallery from './Oda1Gallery';
 
 
 function StandartOda(props) {
@@ -19,23 +20,20 @@ function StandartOda(props) {
         setFullScreen(!isFullScreen);
     };
     return (
-        <div>
+        <div className='bg-bg1'>
             <Navbar />
 
             <div className='justify-center items-center'>
-                <h1 className='flex justify-center items-center text-3xl font-bold text-womco mt-11 mb-0 pb-0'>Standart Oda</h1>
-                <div className='flex justify-center items-center w-14 ml-14 h-12 bg-yz shadow-lg'></div>
+                <h1 className='flex justify-center items-center text-3xl font-bold text-womco pt-8 mb-0 pb-0'>Standart Oda</h1>
+                <div className='w-full h-12 bg-yz shadow-lg'></div>
             </div>
 
 
-            <div className=' grid grid-cols-2 gap-4 flex justify-center items-center   m-10 mb-11 mt-11 max-sm:grid-cols-1 max-sm:m-3 max-md:grid-cols-1
-             max-md:m-2 max-lg:m-1 '>
 
-                {/*
-                <div className='transform scale-125 transition-transform duration-500 shadow-lg rounded-full flex justify-center items-center'>
-                    <img className='w-full   h-auto rounded-md' src={resim1} alt="" />
+            <div className=' grid grid-cols-2 gap-4 flex justify-center items-center  ml-10 mr-10 pb-11 mt-8 max-sm:grid-cols-1 max-sm:m-3 max-md:grid-cols-1
+                    max-md:m-2 max-lg:m-1 '>
 
-                </div>*/}
+
 
                 <div >
                     {isFullScreen && (
@@ -55,10 +53,10 @@ function StandartOda(props) {
                             onClick={handleImageClick}
                         >
                             <img className='rounded-lg'
-                                src={resim1}
+                                src={img1}
                                 alt="Fullscreen"
                                 style={{
-                                    maxWidth: '100%',
+                                    maxWidth: '70%',
                                     maxHeight: '100%',
 
                                 }}
@@ -66,13 +64,16 @@ function StandartOda(props) {
                         </div>
                     )}
 
-                    <img className='rounded-lg  max-xl:w-100%'
-                        src={resim1}
+                    <img className='rounded-lg  w-70%'
+                        src={img1}
                         alt="Thumbnail"
                         style={{ cursor: 'pointer' }}
                         onClick={handleImageClick}
                     />
                 </div>
+
+
+
                 <div className=' grid  max-sm:grid-cols-1 max-sm:pr-11 max-sm:pl-9 max-md:grid-cols-2 max-md:pr-8 min-xl:grid-cols-4 gap-4'>
 
                     <div className='grid grid-cols-2 gap-2 '>
@@ -104,8 +105,6 @@ function StandartOda(props) {
                         </div>
                     </div>
 
-
-
                     <div className='grid grid-cols-2 gap-2'>
                         <div className='flex flex-col justify-center items-end max-sm:items-center'>
                             <img className='w-9  pb-5 max-sm:pb-3 max-sm:w-9' src={Size} alt="" />
@@ -116,48 +115,33 @@ function StandartOda(props) {
                         </div>
                     </div>
 
+                    
                 </div>
 
 
+            </div>
 
 
-                {/* 
-                <div className='w-[30rem] ml-[7rem] mt-[2rem] px-4 flex flex-col justify-center items-center relative bg-gray-100 rounded-lg 
-                shadow-lg  max-sm:grid-cols-1 max-sm:w-[25rem]  max-sm:mt-11 max-md:grid-cols-1 max-md:m-0 max-lg:m-1 ' >
-                    <div className='w-full flex justify-center item-start bg-womco p-4 rounded-lg z-9 drop-shadow-lg mt-[-4rem]'>
-                        <div className='w-full flex justify-between items-start'>
-                            <h1 className='text-white font-bold text-2xl'>ÖZELLİKLER</h1>
-                        </div>
-                    </div>
-                    <div className=' w-full scroll-py-4 py-4  background-container2'>
-                        <div className='w-full h-full min-h-[8rem] overflow-y-auto '>
-                            <div className="bg-gray-200 p-2 my-1 flex justify-between rounded-lg">
-                                <p className='w-full whitespace-nowrap overflow-x-hidden text-ellipsis'>ODA TİPİ: STÜDYO</p>
 
-                            </div>
-                            <div className="bg-gray-200 p-2 my-1 flex justify-between rounded-lg">
-                                <p className='w-full whitespace-nowrap overflow-x-hidden text-ellipsis'>KONUM: KOŞE ODA</p>
+            <div className='font-sans p-3 pl-8 mb-5 max-sm:pl-4  text-center text-yz2 text-black'>
 
-                            </div>
-                            <div className="bg-gray-200 p-2 my-1 flex justify-between rounded-lg">
-                                <p className='w-full whitespace-nowrap overflow-x-hidden text-ellipsis'>BÜYÜKLÜK: 38 M2</p>
+                <h3 className='m-1 font-bold'>Odalarda Konfor ve Zarafet:</h3>
+                <p>
+                    Womco Butik Otel, konuklarına konfor ve zarafetin mükemmel bir kombinasyonunu sunan özenle tasarlanmış odalarıyla bilinir.
+                    Her oda, modern tasarım anlayışıyla donatılmış olup, misafirlerimizin rahatı ve huzuru düşünülerek özel olarak düzenlenmiştir.
+                    Yumuşak renk paleti, özel tasarlanmış mobilyalar ve lüks tekstil ürünleri, odalarımızın sıcak ve davetkar bir atmosfere sahip
+                    olmasını sağlar.
+                </p>
+                <h3 className='m-1 mt-5 font-bold'>Modern İmkanlar:</h3>
+                <p>
+                    Odalarda, konuklarımızın ihtiyaçlarını karşılamak için en son teknoloji ürünleri kullanılmıştır. Hızlı Wi-Fi, düz ekran TV,
+                    klima ve güvenlik kasası gibi modern olanaklar, konforunuz için düşünülmüş detaylardandır. Ayrıca, özel banyolarımızda lüks
+                    banyo malzemeleri ve geniş duş alanları bulunmaktadır.
+                </p>
 
-                            </div>
-                            <div className="bg-gray-200 p-2 my-1 flex justify-between rounded-lg">
-                                <p className='w-full whitespace-nowrap overflow-x-hidden text-ellipsis'>YATAK: 1 ÇİFT KİŞİLİK</p>
-
-                            </div>
-                            <div className="bg-gray-200 p-2 my-1 flex justify-between rounded-lg">
-                                <p className='w-full whitespace-nowrap overflow-x-hidden text-ellipsis'>ÇEKYAT: 1 ÇİFT KİŞİLİK</p>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-                */}
-
+                <p>
+                    Womco Butik Otel'de temizlik ve konfor, misafirlerimize unutulmaz bir konaklama deneyimi sunmak için bir araya gelir. Kendinizi evinizde gibi hissetmek için sıcak bir karşılama ve özenli hizmetle dolu bir konaklama için bizi tercih edin.
+                </p>
             </div>
 
             <div className='w-full h-12 bg-yz  mb-5 shadow-lg'></div>
@@ -224,29 +208,35 @@ function StandartOda(props) {
 
             <div className='w-full h-12 bg-yz mb-11 max-sm:mb-8 shadow-lg'></div>
 
+            <div>
+                <Oda1Gallery />
+            </div>
+
+            {/* 
             <div className='mb-8 max-sm:mb-4 '>
                 <Slide />
-            </div>
+            </div> */}
 
             <div className='w-full h-12 bg-yz mt-8 max-sm:mt-4 shadow-lg'></div>
 
             <div className='font-sans p-3 pl-8 mb-5 max-sm:pl-4 text-center text-yz2 text-black'>
 
-                <h3 className='m-1'>COVID-19: HİJYEN VE TEMİZLİK</h3>
-                <p>Bu otel Güvenli Turizm Sertifikasyon Programı (Türkiye) ve Safe Travels (WTTC - Küresel) sterilizasyon kurallarına uyduğunu
-                    belirtmektedir.</p>
-                <p className='m-1'>Bu otel, gelişmiş temizlik ve misafir güvenliği önlemlerinin uygulamada olduğunu belirtmektedir.</p>
-                <p >Odalar ve diğer kapalı alanlardaki camlar günlük rutin temizlik esnasında açık ve temizlik sonrası en az 1 saat
-                    havalandırılıyor.</p>
-                <p className='m-1'>Oda temizliğini yapan kat görevlisi her oda temizliğinde yeni bir tek kullanımlık eldiven ile temizlik yapmaktadır.</p>
-                <p>Genel temizlik su ve deterjanla yapılmaktadır. Özellikle eller ile sık dokunulan yüzeyler, kapı kolları, bataryalar,
-                    tırabzanlar, sık dokunulan düğmeler, telefon ahizesi, televizyon ve klima kumandası, ortak kullanım alanlarındaki tuvalet
-                    ve lavabo temizliğine özen gösterilmektedir. Bu alanların temizliği için su ve deterjan ile temizlik yapıldıktan sonra uygun
-                    dozda çamaşır suyu veya klor tablet kullanılmaktadır.</p>
-                <p className='m-1'> Bardak ve tabak gibi ortak kullanılan eşyalar her kullanım sonrasında su ve deterjanla yıkanmakta ve kullanımına kadar
-                    temiz bir ortamda saklanmaktadır.</p>
-                <p>Çarşaf ve havlu gibi tekstil ürünleri 60-90 derecede deterjan ve çamaşır suyu ile çamaşır makinesinde yıkanmaktadır.</p>
 
+                <h3 className='m-1 font-bold'>Temizlik Standartlarımız:</h3>
+                <p>
+                    Womco Butik Otel, hijyen ve temizlik konusunda en yüksek standartları benimser. Her oda, titizlikle temizlenir ve
+                    dezenfekte edilir.Deneyimli temizlik personelimiz, misafirlerimizin sağlığına büyük önem verir ve odaların her
+                    detayına özen gösterir. Özellikle bu günlerde hijyen konusundaki duyarlılığımızı en üst düzeye çıkarmış bulunmaktayız.
+                </p>
+                <h3 className='m-1 font-bold'>Oda Servisi:</h3>
+                <p>
+                    Misafirlerimizin konforu bizim önceliğimizdir. Odalarda bulunan özel servis hizmetimiz sayesinde, günün her saatinde
+                    ihtiyaçlarınızı karşılayabilirsiniz. Menümüzdeki lezzetleri odanızda keyifle tadabilir ve özel bir konaklama
+                    deneyiminin tadını çıkarabilirsiniz.
+                </p>
+                <p>
+                    Womco Butik Otel'de temizlik ve konfor, misafirlerimize unutulmaz bir konaklama deneyimi sunmak için bir araya gelir. Kendinizi evinizde gibi hissetmek için sıcak bir karşılama ve özenli hizmetle dolu bir konaklama için bizi tercih edin.
+                </p>
             </div>
 
             <div className='w-full h-12 bg-yz mb-11 shadow-lg'></div>
