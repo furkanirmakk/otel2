@@ -162,10 +162,6 @@ function OurServices() {
                     </div>
             </div>
 
-            <div>
-                <OdalarGallery />
-            </div>
-           
 
             <div className='w-full h-12 bg-yz'></div>
 
